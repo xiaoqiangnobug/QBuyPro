@@ -18,8 +18,13 @@ from django.conf.urls.static import static
 from django.urls import path, include
 
 from QBuyPro import settings
+from api import api_router
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('active/', include('actives.urls', namespace='active'))
+    path('api/', include(api_router.urls)),
+    path('api-auth/', include('rest_framework.urls')),
+    path('active/', include('actives.urls', namespace='active')),
+    path('user/', include('userapp.urls', namespace='user'))
 ]+static(settings.MEDIA_URL,
          document_root=settings.MEDIA_ROOT)

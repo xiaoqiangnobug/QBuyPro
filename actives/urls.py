@@ -1,8 +1,8 @@
 from django.urls import path
-from .views import ActiveGoodsView, quby_active
+from .views import ActiveGoodsView, qbuy_task
 
 app_name = 'active'
 urlpatterns = [
     path('info/', ActiveGoodsView.as_view(), name='info'),
-    path('qbuy/', quby_active, name='active')
+   path('qbuy/', qbuy_task, name='active')
 ]

@@ -23,7 +23,8 @@ INSTALLED_APPS = [
     'userapp',
     'order',
     'actives',
-    'goods'
+    'goods',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -199,3 +200,13 @@ LOGGING = {
 
 # 配置Celery
 CELERY_IMPORTS = ('')
+
+
+# REST_FRAMEWORK = {
+#     # Use Django's standard `django.contrib.auth` permissions,
+#     # or allow read-only access for unauthenticated users.
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+#        # {'PAGE_SIZE': 10}
+#     ]
+# }

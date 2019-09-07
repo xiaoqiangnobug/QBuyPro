@@ -1,4 +1,6 @@
 from django.db import models
+from rest_framework import serializers
+
 from goods.models import GoodsModel
 # Create your models here.
 class ActiveModel(models.Model):
@@ -31,6 +33,7 @@ class ActiveGoodsModel(models.Model):
                               null=True,
                               on_delete=models.SET_NULL)
     rate = models.FloatField(verbose_name='折扣价', default=0.88)
+
 
 
     def __str__(self):
